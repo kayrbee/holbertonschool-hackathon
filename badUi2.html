@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danger!!</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+
+<main>
+
+<div>
+    <form>
+
+
+
+        <h3>Email</h3>
+        <input type="text" placeholder="Email" required>
+
+        <h3>Birthday</h3>
+        <div class="row">
+
+        <div class="slot">
+            <h4>D</h4>
+            <div id="d1" class="digit">0</div><button onclick="stopSlot('d1')">Stop</button>
+        </div>
+        <div class="slot">
+            <h4>D</h4>
+            <div id="d2" class="digit">0</div><button onclick="stopSlot('d2')">Stop</button>
+        </div>
+
+        <div class="slot">
+            <h4>M</h4>
+            <div id="m1" class="digit">0</div><button onclick="stopSlot('m1')">Stop</button>
+        </div>
+        <div class="slot">
+            <h4>M</h4>
+            <div id="m2" class="digit">0</div><button onclick="stopSlot('m2')">Stop</button>
+        </div>
+
+        <div class="slot">
+            <h4>Y</h4>
+            <div id="y1" class="digit">0</div><button onclick="stopSlot('y1')">Stop</button>
+        </div>
+        <div class="slot">
+            <h4>Y</h4>
+            <div id="y2" class="digit">0</div><button onclick="stopSlot('y2')">Stop</button>
+        </div>
+        </div>
+        <h3>Password</h3>
+
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Enter password" oninput="updateDots()">
+            <button type="button" onclick="togglePassword()">Show</button>
+            <button type="button" onclick="checkPasswordButton()">Check</button>
+        </div>
+
+        <div id="passwordDots"></div>
+
+        <h3>First Name</h3>
+        <input
+            type="text"
+            id="firstname"
+            placeholder="First Name"
+            required
+            onkeydown="blockTyping(event)"
+        >
+
+
+
+
+
+
+
+    </form>
+
+    <div>
+
+        <h3>Last Name</h3>
+        <div class="row">
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        <div>
+        <select id="letter" name="letter">
+        <option value="">A–Z</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+        <option>-</option>
+        </select>
+        </div>
+        </div>
+
+    </div>
+</div>
+
+</main>
+
+<script>
+function togglePassword() {
+  const pwd = document.getElementById("password");
+  const btn = event.target;
+  const firstNameBox = document.getElementById("firstname");
+
+
+d
+  // Toggle visibility
+  if (pwd.type === "password") {
+    pwd.type = "text";
+    btn.textContent = "Hide";
+  } else {
+    pwd.type = "password";
+    btn.textContent = "Show";
+  }
+
+  // Clear first name
+  firstNameBox.value = "";
+  pwd.value = "";
+
+  // Select password text
+  pwd.select();
+
+  // Move cursor to first name
+  firstNameBox.focus();
+
+  // Auto-hide after 1 second
+  setTimeout(() => {
+    pwd.type = "password";
+    btn.textContent = "Show";
+  }, 1000);
+}
+
+function updateDots() {
+  const pwd = document.getElementById("password").value;
+  const container = document.getElementById("passwordDots");
+
+  container.innerHTML = ""; // clear old dots
+
+  // Create one clickable dot per letter
+  for (let i = 0; i < pwd.length; i++) {
+    const dot = document.createElement("div");
+    dot.className = "dot";
+
+    // When clicking a dot, add that letter to First Name
+    dot.onclick = () => {
+      document.getElementById("firstname").value += pwd[i];
+    };
+
+    container.appendChild(dot);
+  }
+}
+
+function blockTyping(e) {
+  e.preventDefault(); // stop the key from being typed
+  alert("Please select the letters from the black drops above");
+}
+
+function checkPasswordButton() {
+  const pwd = document.getElementById("password").value;
+  const errors = isPasswordValid(pwd);
+
+  if (errors.length > 0) {
+    alert(errors.join("\n"));
+  } else {
+    alert("Password is valid");
+  }
+}
+
+function isPasswordValid(pwd) {
+  const vowels = "aeiou";
+  let errors = [];
+
+  // Rule 3: Minnimum length 6
+  if (pwd.length < 6) {
+    errors.push("Password must be more then 6 characters");
+  }
+
+  // Rule 2: No repeated letters
+  const set = new Set(pwd);
+  if (set.size !== pwd.length) {
+    errors.push("Password cannot contain repeated letters");
+  }
+
+  // Rule 1: Must NOT be alphabetical order
+  let isAlphabetical = true;
+  for (let i = 0; i < pwd.length - 1; i++) {
+    if (pwd.charCodeAt(i + 1) !== pwd.charCodeAt(i) + 1) {
+      isAlphabetical = false;
+      break;
+    }
+  }
+  if (isAlphabetical && pwd.length > 1) {
+    errors.push("Password cannot be in alphabetical order");
+  }
+
+  // Rule 4: Every consonant must be followed by a vowel
+  for (let i = 0; i < pwd.length - 1; i++) {
+    const current = pwd[i].toLowerCase();
+    const next = pwd[i + 1].toLowerCase();
+
+    const isConsonant = !vowels.includes(current);
+    const nextIsVowel = vowels.includes(next);
+
+    if (isConsonant && !nextIsVowel) {
+      errors.push("Every consonant must be followed by a vowel");
+      break; // no need to check further
+    }
+  }
+
+  return errors;
+}
+
+let slotIntervals = {};
+
+function startSlot(id) {
+  const element = document.getElementById(id);
+
+  slotIntervals[id] = setInterval(() => {
+    element.textContent = Math.floor(Math.random() * 10);
+  }, 80);
+}
+
+function stopSlot(id) {
+  clearInterval(slotIntervals[id]);
+}
+
+window.onload = () => {
+  startSlot("d1");
+  startSlot("d2");
+  startSlot("m1");
+  startSlot("m2");
+  startSlot("y1");
+  startSlot("y2");
+};
+
+
+
+</script>
+</body>
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background: #9d1111;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .row {
+            display: flex;
+            align-items: center; /* vertically align */
+            gap: 10px;           /* space between items */
+            }
+        .password-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            }
+        .dot {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            background: black;
+            border-radius: 50%;
+            cursor: pointer;
+            }
+
+        .digit {
+            font-size: 40px;
+            width: 40px;
+            height: 60px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+            background: white;
+            }
+    </style>
+</html>
